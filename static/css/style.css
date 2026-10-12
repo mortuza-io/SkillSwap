@@ -1,0 +1,39 @@
+:root {
+    color-scheme: light;
+    --background: #f5f8f7;
+    --surface: #ffffff;
+    --primary: #187d5b;
+    --primary-hover: #126347;
+    --accent: #e8f5ee;
+    --text: #182b24;
+    --muted: #56675f;
+    --border: #d5dfd9;
+    --error: #b42318;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--background); color: var(--text); line-height: 1.6; }
+a { color: var(--primary); text-underline-offset: 3px; }
+.header { max-width: 1100px; margin: auto; padding: 24px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.brand { font-size: 24px; font-weight: 750; text-decoration: none; }
+.brand span { display: block; color: var(--muted); font-size: 12px; font-weight: 400; }
+main { padding: 28px 20px 64px; }
+.card { max-width: 480px; margin: auto; padding: 32px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); box-shadow: 0 12px 36px #182b2408; }
+.eyebrow { display: inline-block; padding: 4px 10px; border-radius: 6px; background: var(--accent); color: var(--primary-hover); font-size: 11px; font-weight: 700; letter-spacing: 1px; }
+h1 { margin: 16px 0 8px; font-size: 30px; line-height: 1.2; overflow-wrap: anywhere; }
+.intro, .footer-text { color: var(--muted); }
+.intro { margin: 0 0 24px; }
+.field { margin-bottom: 18px; }
+label { display: block; margin-bottom: 6px; font-size: 14px; font-weight: 600; }
+input { width: 100%; padding: 11px 12px; border: 1px solid var(--border); border-radius: 8px; font: inherit; background: var(--surface); color: var(--text); }
+input:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; }
+.help { margin-top: 6px; color: var(--muted); font-size: 12px; }
+.help ul { padding-left: 18px; margin: 4px 0; }
+.errorlist { color: var(--error); font-size: 13px; padding-left: 18px; }
+button { padding: 11px 16px; border: 0; border-radius: 8px; font: inherit; font-weight: 600; cursor: pointer; }
+.primary { width: 100%; background: var(--primary); color: white; }
+.primary:hover { background: var(--primary-hover); }
+.secondary { background: var(--accent); color: var(--primary-hover); }
+.footer-text { margin: 24px 0 0; text-align: center; font-size: 14px; }
+dt { color: var(--muted); font-size: 13px; }
+dd { margin: 0 0 16px; overflow-wrap: anywhere; }
+@media (max-width: 480px) { .card { padding: 24px; } .brand span { max-width: 180px; } h1 { font-size: 26px; } }

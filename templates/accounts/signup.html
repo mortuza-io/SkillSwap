@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Sign up · SkillSwap{% endblock %}
+{% block content %}
+<section class="card">
+    <span class="eyebrow">START SHARING</span>
+    <h1>Create your account</h1>
+    <p class="intro">Bring a skill. Discover something new.</p>
+    <form method="post">
+        {% csrf_token %}
+        {% include 'accounts/form_fields.html' %}
+        <button class="primary" type="submit">Create account</button>
+    </form>
+    <p class="footer-text">Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+</section>
+{% endblock %}
